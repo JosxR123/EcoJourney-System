@@ -1,0 +1,24 @@
+﻿@model ToursEcologicos.Domain.Entities.ProgramacionTour
+
+<h1>Detalles de programación</h1>
+
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">Tour</dt>
+    <dd class="col-sm-9">@Model.Tour?.Nombre</dd>
+
+    <dt class="col-sm-3">Guía</dt>
+    <dd class="col-sm-9">@Model.Guia?.Nombre</dd>
+
+    <dt class="col-sm-3">Fecha</dt>
+    <dd class="col-sm-9">@Model.Fecha.ToShortDateString()</dd>
+
+    <dt class="col-sm-3">Hora</dt>
+    <dd class="col-sm-9">@Model.HoraSalida</dd>
+
+    <dt class="col-sm-3">Cupos</dt>
+    <dd class="col-sm-9">@Model.CuposDisponibles</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4 fw-bold text-success">Sistema de Planificación de Tours Ecológicos</h1>
+    <p class="lead mt-4">
+        Plataforma para gestionar clientes, guías, rutas, tours, programaciones y reservas.
+    </p>
+    <p class="mt-3">
+        Este sistema permite organizar excursiones ecológicas, controlar cupos disponibles,
+        asignar guías y administrar reservas de forma ordenada y eficiente.
+    </p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Clientes</h4>
+                <p class="card-text">Registro y administración de clientes interesados en tours ecológicos.</p>
+                <a asp-controller="Clientes" asp-action="Index" class="btn btn-outline-success">Ir a Clientes</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Guías</h4>
+                <p class="card-text">Gestión de guías turísticos especializados en excursiones ecológicas.</p>
+                <a asp-controller="Guias" asp-action="Index" class="btn btn-outline-success">Ir a Guías</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Rutas</h4>
+                <p class="card-text">Administración de rutas ecológicas, ubicaciones, distancias y dificultad.</p>
+                <a asp-controller="Rutas" asp-action="Index" class="btn btn-outline-success">Ir a Rutas</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Tours</h4>
+                <p class="card-text">Creación de tours con duración, precio, capacidad y ruta asignada.</p>
+                <a asp-controller="Tours" asp-action="Index" class="btn btn-outline-success">Ir a Tours</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Programaciones</h4>
+                <p class="card-text">Programación de tours por fecha, hora, guía y cupos disponibles.</p>
+                <a asp-controller="ProgramacionTours" asp-action="Index" class="btn btn-outline-success">Ir a Programaciones</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title text-success">Reservas</h4>
+                <p class="card-text">Control de reservas realizadas por clientes para tours programados.</p>
+                <a asp-controller="Reservas" asp-action="Index" class="btn btn-outline-success">Ir a Reservas</a>
+            </div>
+        </div>
+    </div>
+</div>

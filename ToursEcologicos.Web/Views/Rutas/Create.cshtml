@@ -1,0 +1,52 @@
+﻿@model ToursEcologicos.Domain.Entities.Ruta
+
+@{
+    ViewData["Title"] = "Crear ruta";
+}
+
+<h1>Crear ruta</h1>
+
+<h4>Registro de ruta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="NombreRuta" class="control-label"></label>
+                <input asp-for="NombreRuta" class="form-control" />
+                <span asp-validation-for="NombreRuta" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Ubicacion" class="control-label"></label>
+                <input asp-for="Ubicacion" class="form-control" />
+                <span asp-validation-for="Ubicacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DistanciaKm" class="control-label"></label>
+                <input asp-for="DistanciaKm" class="form-control" />
+                <span asp-validation-for="DistanciaKm" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Dificultad" class="control-label"></label>
+                <input asp-for="Dificultad" class="form-control" />
+                <span asp-validation-for="Dificultad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

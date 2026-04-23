@@ -1,0 +1,19 @@
+﻿@model ToursEcologicos.Domain.Entities.ProgramacionTour
+
+<h1>Eliminar programación</h1>
+
+<h3>¿Desea eliminar esta programación?</h3>
+
+<dl class="row">
+    <dt>Tour</dt>
+    <dd>@Model.Tour?.Nombre</dd>
+
+    <dt>Guía</dt>
+    <dd>@Model.Guia?.Nombre</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Eliminar" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

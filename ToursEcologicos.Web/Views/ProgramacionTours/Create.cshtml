@@ -1,0 +1,45 @@
+﻿@model ToursEcologicos.Domain.Entities.ProgramacionTour
+
+@{
+    ViewData["Title"] = "Crear programación";
+}
+
+<h1>Crear programación</h1>
+
+<h4>Programación de tour</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="TourId"></label>
+                <select asp-for="TourId" class="form-control" asp-items="ViewBag.TourId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="GuiaId"></label>
+                <select asp-for="GuiaId" class="form-control" asp-items="ViewBag.GuiaId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Fecha"></label>
+                <input asp-for="Fecha" class="form-control" type="date" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="HoraSalida"></label>
+                <input asp-for="HoraSalida" class="form-control" type="time" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="CuposDisponibles"></label>
+                <input asp-for="CuposDisponibles" class="form-control" />
+            </div>
+
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+</div>

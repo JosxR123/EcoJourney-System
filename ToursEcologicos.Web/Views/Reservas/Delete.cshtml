@@ -1,0 +1,16 @@
+﻿@model ToursEcologicos.Domain.Entities.Reserva
+
+<h1>Eliminar reserva</h1>
+
+<h3>¿Desea eliminar esta reserva?</h3>
+
+<dl>
+    <dt>Cliente</dt>
+    <dd>@Model.Cliente?.Nombre</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Eliminar" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

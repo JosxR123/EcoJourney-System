@@ -1,0 +1,28 @@
+﻿@model ToursEcologicos.Domain.Entities.Ruta
+
+@{
+    ViewData["Title"] = "Detalles de la ruta";
+}
+
+<h1>Detalles de la ruta</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Nombre de ruta</dt>
+        <dd class="col-sm-9">@Model.NombreRuta</dd>
+
+        <dt class="col-sm-3">Ubicación</dt>
+        <dd class="col-sm-9">@Model.Ubicacion</dd>
+
+        <dt class="col-sm-3">Distancia (km)</dt>
+        <dd class="col-sm-9">@Model.DistanciaKm</dd>
+
+        <dt class="col-sm-3">Dificultad</dt>
+        <dd class="col-sm-9">@Model.Dificultad</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+</div>

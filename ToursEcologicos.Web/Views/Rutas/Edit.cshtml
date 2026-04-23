@@ -1,0 +1,56 @@
+﻿@model ToursEcologicos.Domain.Entities.Ruta
+
+@{
+    ViewData["Title"] = "Editar ruta";
+}
+
+<h1>Editar ruta</h1>
+
+<h4>Datos de la ruta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group mb-3">
+                <label asp-for="NombreRuta" class="control-label"></label>
+                <input asp-for="NombreRuta" class="form-control" />
+                <span asp-validation-for="NombreRuta" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Ubicacion" class="control-label"></label>
+                <input asp-for="Ubicacion" class="form-control" />
+                <span asp-validation-for="Ubicacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DistanciaKm" class="control-label"></label>
+                <input asp-for="DistanciaKm" class="form-control" />
+                <span asp-validation-for="DistanciaKm" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Dificultad" class="control-label"></label>
+                <input asp-for="Dificultad" class="form-control" />
+                <span asp-validation-for="Dificultad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Guardar cambios" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <div class="mt-3">
+            <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

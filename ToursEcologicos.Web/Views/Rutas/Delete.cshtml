@@ -1,0 +1,31 @@
+﻿@model ToursEcologicos.Domain.Entities.Ruta
+
+@{
+    ViewData["Title"] = "Eliminar ruta";
+}
+
+<h1>Eliminar ruta</h1>
+
+<h3>¿Está seguro de que desea eliminar esta ruta?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Nombre de ruta</dt>
+        <dd class="col-sm-9">@Model.NombreRuta</dd>
+
+        <dt class="col-sm-3">Ubicación</dt>
+        <dd class="col-sm-9">@Model.Ubicacion</dd>
+
+        <dt class="col-sm-3">Distancia (km)</dt>
+        <dd class="col-sm-9">@Model.DistanciaKm</dd>
+
+        <dt class="col-sm-3">Dificultad</dt>
+        <dd class="col-sm-9">@Model.Dificultad</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+    </form>
+</div>

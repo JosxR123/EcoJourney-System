@@ -1,0 +1,50 @@
+﻿@model ToursEcologicos.Domain.Entities.ProgramacionTour
+
+@{
+    ViewData["Title"] = "Editar programación";
+}
+
+<h1>Editar programación</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="TourId"></label>
+                <select asp-for="TourId" class="form-control" asp-items="ViewBag.TourId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="GuiaId"></label>
+                <select asp-for="GuiaId" class="form-control" asp-items="ViewBag.GuiaId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Fecha"></label>
+                <input asp-for="Fecha" class="form-control" type="date" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="HoraSalida"></label>
+                <input asp-for="HoraSalida" class="form-control" type="time" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="CuposDisponibles"></label>
+                <input asp-for="CuposDisponibles" class="form-control" />
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Guardar cambios" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <div class="mt-3">
+            <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@model ToursEcologicos.Domain.Entities.Tour
+
+@{
+    ViewData["Title"] = "Eliminar tour";
+}
+
+<h1>Eliminar tour</h1>
+
+<h3>¿Está seguro de que desea eliminar este tour?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Nombre</dd>
+
+        <dt class="col-sm-3">Descripción</dt>
+        <dd class="col-sm-9">@Model.Descripcion</dd>
+
+        <dt class="col-sm-3">Duración (horas)</dt>
+        <dd class="col-sm-9">@Model.DuracionHoras</dd>
+
+        <dt class="col-sm-3">Precio</dt>
+        <dd class="col-sm-9">@Model.Precio</dd>
+
+        <dt class="col-sm-3">Capacidad máxima</dt>
+        <dd class="col-sm-9">@Model.CapacidadMaxima</dd>
+
+        <dt class="col-sm-3">Ruta</dt>
+        <dd class="col-sm-9">@(Model.Ruta != null ? Model.Ruta.NombreRuta : "")</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+    </form>
+</div>

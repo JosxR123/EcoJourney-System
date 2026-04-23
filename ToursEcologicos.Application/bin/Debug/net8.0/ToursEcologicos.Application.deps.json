@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ToursEcologicos.Application/1.0.0": {
+        "dependencies": {
+          "ToursEcologicos.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ToursEcologicos.Application.dll": {}
+        }
+      },
+      "ToursEcologicos.Domain/1.0.0": {
+        "runtime": {
+          "ToursEcologicos.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ToursEcologicos.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToursEcologicos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

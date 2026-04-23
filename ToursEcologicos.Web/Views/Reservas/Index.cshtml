@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ToursEcologicos.Domain.Entities.Reserva>
+
+@{
+    ViewData["Title"] = "Reservas";
+}
+
+<h1>Reservas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nueva reserva</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Tour programado</th>
+            <th>Cantidad de personas</th>
+            <th>Fecha de reserva</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(item.Cliente != null ? item.Cliente.Nombre : "")</td>
+                <td>
+                    @(item.ProgramacionTour != null && item.ProgramacionTour.Tour != null
+                                    ? item.ProgramacionTour.Tour.Nombre
+                                    : "")
+            </td>
+            <td>@item.CantidadPersonas</td>
+            <td>@item.FechaReserva.ToShortDateString()</td>
+            <td>@item.Estado</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+                }
+    </tbody>
+</table>

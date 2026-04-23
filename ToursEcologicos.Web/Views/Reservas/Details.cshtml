@@ -1,0 +1,23 @@
+﻿@model ToursEcologicos.Domain.Entities.Reserva
+
+<h1>Detalles de reserva</h1>
+
+<dl class="row">
+    <dt>Cliente</dt>
+    <dd>@Model.Cliente?.Nombre</dd>
+
+    <dt>Tour</dt>
+    <dd>@Model.ProgramacionTour?.Tour?.Nombre</dd>
+
+    <dt>Cantidad</dt>
+    <dd>@Model.CantidadPersonas</dd>
+
+    <dt>Fecha</dt>
+    <dd>@Model.FechaReserva.ToShortDateString()</dd>
+
+    <dt>Estado</dt>
+    <dd>@Model.Estado</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

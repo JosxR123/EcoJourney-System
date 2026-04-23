@@ -1,0 +1,11 @@
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\bin\Debug\net8.0\ToursEcologicos.Domain.deps.json
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\bin\Debug\net8.0\ToursEcologicos.Domain.dll
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\bin\Debug\net8.0\ToursEcologicos.Domain.pdb
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.AssemblyInfoInputs.cache
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.AssemblyInfo.cs
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.dll
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\refint\ToursEcologicos.Domain.dll
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ToursEcologicos.Domain.pdb
+C:\Users\Jr258\source\repos\ToursEcologicos\ToursEcologicos.Domain\obj\Debug\net8.0\ref\ToursEcologicos.Domain.dll

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ToursEcologicos.Domain.Entities.Tour>
+
+@{
+    ViewData["Title"] = "Tours";
+}
+
+<h1>Tours</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nuevo tour</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Duración (horas)</th>
+            <th>Precio</th>
+            <th>Capacidad máxima</th>
+            <th>Ruta</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>@item.DuracionHoras</td>
+                <td>@item.Precio</td>
+                <td>@item.CapacidadMaxima</td>
+                <td>@(item.Ruta != null ? item.Ruta.NombreRuta : "")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
